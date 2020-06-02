@@ -12,7 +12,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
    Map data = {};
-   
+   List<dynamic> countriesData;
   int _currentindex = 0;
   void _onItemTapped(int index) {
     setState(() {
@@ -23,7 +23,9 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     data = ModalRoute.of(context).settings.arguments;
-    
+    //countriesData = data['countiesData'];
+    //print(countriesData);
+    //print(data);
     List<Widget> _widgetOptions = <Widget>[
       HomePage(),
       IndiaStaticticsPage(data),

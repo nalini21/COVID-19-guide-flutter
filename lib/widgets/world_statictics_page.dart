@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:t1/services/countries.dart';
 
-
 class WorldStaticticsPage extends StatefulWidget {
   final Map data;
-
+  //
   WorldStaticticsPage(this.data);
   @override
   _WorldStaticticsPageState createState() => _WorldStaticticsPageState();
 }
 
 class _WorldStaticticsPageState extends State<WorldStaticticsPage> {
+  //final Map<dynamic,dynamic> countriesData= widget.data['countriesData'];
+  //print(widget.data['countriesData']);
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -54,22 +55,87 @@ class _WorldStaticticsPageState extends State<WorldStaticticsPage> {
               _buildCard('Deaths', widget.data['worldDeaths'], 4),
             ],
           ),
-          // SizedBox(height: 20),
-          // ListView.builder(
-          //     //addAutomaticKeepAlives: true,
-          //     shrinkWrap: true,
-          //     itemCount: 10,
-          //     itemBuilder: (context, index) {
-              
-          //       return Card(
-          //         child: Expanded(
-          //           child: ListTile(
-          //             title: Text('${Country(widget.countryNames[index])}'),
-          //             //${Country(widget.countryNames[index])}
-          //           ),
-          //         ),
-          //       );
-          //     }),
+          SizedBox(height: 20),
+          Container(
+            height: 580,
+            margin: EdgeInsets.fromLTRB(20, 10, 20, 0),
+            child: ListView.builder(
+
+                //addAutomaticKeepAlives: true,
+                shrinkWrap: true,
+                itemCount: widget.data['countriesData'].length,
+                itemBuilder: (context, index) {
+                  return Card(
+                    shadowColor: Colors.grey[400],
+                    //color: Colors.grey[100],
+                    margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
+                    child: ListTile(
+                      leading: Column(children: <Widget>[
+                        Icon(
+                          Icons.arrow_upward,
+                          color: Colors.red,
+                        ),
+                        SizedBox(height: 10),
+                        Text(
+                          '+${widget.data['countriesData'][index]['todayCases']}',
+                          style: TextStyle(
+                            color: Colors.blue[700],
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        //SizedBox(width: 40),
+                      ]),
+
+                      title: Text(
+                        '${widget.data['countriesData'][index]['country']}',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Quicksand',
+                          letterSpacing: 1,
+                        ),
+                      ),
+
+                      subtitle: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                        //SizedBox(height: 20),
+
+                        Text(
+                          '${widget.data['countriesData'][index]['cases']}',
+                          style: TextStyle(
+                            color: Colors.amber[700],
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Quicksand',
+                            //letterSpacing: 1,
+                          ),
+                        ),
+                        //SizedBox(width: 30),
+                        Text(
+                          '${widget.data['countriesData'][index]['recovered']}',
+                          style: TextStyle(
+                            color: Colors.green[700],
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Quicksand',
+                            //letterSpacing: 1,
+                          ),
+                        ),
+                        //SizedBox(width: 30),
+                        Text(
+                          '${widget.data['countriesData'][index]['deaths']}',
+                          style: TextStyle(
+                            color: Colors.red[700],
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Quicksand',
+                            //letterSpacing: 1,
+                          ),
+                        ),
+                      ]),
+                      //${Country(widget.countryNames[index])}
+                    ),
+                  );
+                }),
+          ),
         ],
       ),
     );
