@@ -1,6 +1,6 @@
-# t1
+# COVID-19 TRACKER
 
-A new Flutter project.
+Flutter App which provides covid-19 confirmed cases data 
 
 ## Getting Started
 
