@@ -2,6 +2,11 @@
 
 ### Flutter App which provides covid-19 confirmed cases data of all the countries, Also gives basic information about COVID-19, Like it's symptoms and precautions to be taken 
 
+##### here is few screenshots from this app
+./india_page_ss1.png
+
+![](/world_page_ss1.png)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
