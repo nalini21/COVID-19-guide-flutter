@@ -1,6 +1,6 @@
 # COVID-19 TRACKER
 
-### Flutter App which provides covid-19 confirmed cases data of all the countries, Also gives basic information about COVID-19, Like symptoms and precautions 
+### Flutter App which provides covid-19 confirmed cases data of all the countries, Also gives basic information about COVID-19, Like it's symptoms and precautions to be taken 
 
 ## Getting Started
 
