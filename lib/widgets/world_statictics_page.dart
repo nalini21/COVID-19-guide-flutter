@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class WorldStaticticsPage extends StatefulWidget {
   final Map data;
@@ -13,8 +14,9 @@ class _WorldStaticticsPageState extends State<WorldStaticticsPage> {
   //print(widget.data['countriesData']);
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context, width: 1080, height: 2340, allowFontScaling: true);
     return new Scaffold(
-       //backgroundColor: Colors.black,
+       backgroundColor: Colors.grey[800],
       body: ListView(
         shrinkWrap: true,
         children: <Widget>[
@@ -29,10 +31,10 @@ class _WorldStaticticsPageState extends State<WorldStaticticsPage> {
                   )),
               //SizedBox(height: 20.0),
               Container(
-                color: Colors.blue[900],
-                  padding: EdgeInsets.fromLTRB(40, 20, 60, 20),
+                color: Colors.grey[900],
+                  padding: EdgeInsets.fromLTRB(80.w, 20.h, 48.w, 20.h),
                   child: Text(
-                    'Confirmed cases Worldwide',
+                    'CONFIRMED CASES WORLDWIDE',
                     style: TextStyle(
                         color: Colors.white,
                         fontFamily: 'Quicksand',
@@ -42,11 +44,11 @@ class _WorldStaticticsPageState extends State<WorldStaticticsPage> {
 
              // SizedBox(height: 20.0),
               GridView.count(
-                padding: EdgeInsets.fromLTRB(0, 270, 0, 0),
+                padding: EdgeInsets.fromLTRB(40.w, 670.h, 40.w, 0),
                 crossAxisCount: 2,
                 primary: false,
-                crossAxisSpacing: 2.0,
-                mainAxisSpacing: 4.0,
+                crossAxisSpacing: 30.0.w,
+                mainAxisSpacing: 30.0.h,
                 shrinkWrap: true,
                 children: <Widget>[
                   _buildCard('Total', widget.data['worldTotal'], 1),
@@ -58,14 +60,14 @@ class _WorldStaticticsPageState extends State<WorldStaticticsPage> {
                Container(
                   
                     //padding: EdgeInsets.fromLTRB(60, 20, 10, 20),
-                    padding: EdgeInsets.fromLTRB(30, 720, 30, 5),
+                    padding: EdgeInsets.fromLTRB(60.w, 2020.h, 60.w, 30.h),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
                          Text(
                         'Today',
                         style: TextStyle(
-                            color: Colors.blue[800],
+                            color: Colors.blue[600],
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.bold,
                             fontSize: 20.0),
@@ -73,7 +75,7 @@ class _WorldStaticticsPageState extends State<WorldStaticticsPage> {
                         Text(
                         'Total',
                         style: TextStyle(
-                            color: Colors.amber[900],
+                            color: Colors.amber[600],
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.bold,
                             fontSize: 20.0),
@@ -82,7 +84,7 @@ class _WorldStaticticsPageState extends State<WorldStaticticsPage> {
                           Text(
                         'Recovered',
                         style: TextStyle(
-                            color: Colors.green[900],
+                            color: Colors.green[600],
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.bold,
                             fontSize: 20.0),
@@ -90,32 +92,19 @@ class _WorldStaticticsPageState extends State<WorldStaticticsPage> {
                            Text(
                         'Deaths',
                         style: TextStyle(
-                            color: Colors.red[900],
+                            color: Colors.red[600],
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.bold,
                             fontSize: 20.0),
                       ),
                         ]),
                   ),
-                  // Container(
-                  
-                  //   //padding: EdgeInsets.fromLTRB(60, 20, 10, 20),
-                  //   padding: EdgeInsets.fromLTRB(40, 750, 45, 0),
-                  //   child: Row(
-                  //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  //     children: <Widget>[
-                  //       Icon(Icons.arrow_drop_down,),
-                  //      Icon(Icons.arrow_drop_down,),
-                  //      Icon(Icons.arrow_drop_down),
-                  //      Icon(Icons.arrow_drop_down),
-                  //       ]),
-                  // ),
             ],
           ),
           //SizedBox(height: 8),
           Container(
-            height: 580,
-            margin: EdgeInsets.fromLTRB(20, 10, 20, 0),
+            height: 1580.h,
+            margin: EdgeInsets.fromLTRB(20.w, 10.h, 20.w, 0),
             child: ListView.builder(
 
                 //addAutomaticKeepAlives: true,
@@ -123,17 +112,18 @@ class _WorldStaticticsPageState extends State<WorldStaticticsPage> {
                 itemCount: widget.data['countriesData'].length,
                 itemBuilder: (context, index) {
                   return Card(
-                      elevation: 5,
-                    shadowColor: Colors.grey[400],
+                    color: Colors.grey[100],
+                      elevation: 6.h,
+                    shadowColor: Colors.grey[100],
                     
                     //color: Colors.grey[100],
-                    margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
+                    margin: EdgeInsets.fromLTRB(20.w, 10.h, 20.w, 30.h),
                     child: ListTile(
                       leading: Column(children: <Widget>[
                         Icon(
                           Icons.trending_up,
                           color: Colors.red,
-                          size: 30,
+                          size: 70.h,
                         ),
                         //SizedBox(height: 10),
                         Text(
@@ -153,7 +143,7 @@ class _WorldStaticticsPageState extends State<WorldStaticticsPage> {
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Quicksand',
-                          letterSpacing: 1,
+                          letterSpacing: 2.w,
                            
                         ),
                       ),
@@ -209,25 +199,22 @@ class _WorldStaticticsPageState extends State<WorldStaticticsPage> {
   Widget _buildCard(String name, String status, int cardIndex) {
     return Card(
         shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-        elevation: 7.0,
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0.w)),
+        elevation: 20.0.h,
         child: Column(
           children: <Widget>[
-            //SizedBox(height: 8.0),
             Stack(children: <Widget>[
               Container(
-                margin: EdgeInsets.only(left: 40.0),
-                height: 10.0,
-                width: 10.0,
+                height: 30.0.h,
+                width: 30.0.w,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30.0),
+                    borderRadius: BorderRadius.circular(30.0.w),
                     border: Border.all(
                         color: Colors.white,
                         style: BorderStyle.solid,
-                        width: 2.0)),
+                        width: 2.0.w)),
               )
             ]),
-           // SizedBox(height: 8.0),
             Text(
               '$name',
               style: TextStyle(
@@ -236,14 +223,14 @@ class _WorldStaticticsPageState extends State<WorldStaticticsPage> {
                 fontSize: 25.0,
               ),
             ),
-            SizedBox(height: 15.0),
+            SizedBox(height: 20.0.h),
             Expanded(
                 child: Container(
                     decoration: BoxDecoration(
                       color: Colors.green,
                       borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(10.0),
-                          bottomRight: Radius.circular(10.0)),
+                          bottomLeft: Radius.circular(30.0.w),
+                          bottomRight: Radius.circular(30.0.w)),
                     ),
                     child: Center(
                       child: Text(
@@ -257,7 +244,7 @@ class _WorldStaticticsPageState extends State<WorldStaticticsPage> {
           ],
         ),
         margin: cardIndex.isEven
-            ? EdgeInsets.fromLTRB(7.0, 0.0, 21.0, 10.0)
-            : EdgeInsets.fromLTRB(24.0, 0.0, 4.0, 10.0));
+            ? EdgeInsets.fromLTRB(7.0.w, 0.0, 21.0.w, 10.0.h)
+            : EdgeInsets.fromLTRB(24.0.w, 0.0, 4.0.w, 10.0.h));
   }
 }

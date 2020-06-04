@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:t1/pages/home.dart';
 import 'package:t1/pages/loading.dart';
 
-import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
+//import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 
 void main() => runApp(
       MaterialApp(
         
+
         debugShowCheckedModeBanner: false,
         initialRoute: '/',
         routes: {

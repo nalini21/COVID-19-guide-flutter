@@ -5,6 +5,7 @@ import 'package:t1/widgets/info_page.dart';
 import 'package:t1/widgets/india_statistic_page.dart';
 import 'package:t1/widgets/world_statictics_page.dart';
 
+
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
@@ -42,22 +43,22 @@ class _HomeState extends State<Home> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             title: Text('Home'),
-           backgroundColor: Colors.blue[800],
+           backgroundColor: Colors.grey[900],
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.equalizer),
             title: Text('India'),
-            backgroundColor: Colors.blue[800],
+            backgroundColor: Colors.grey[900],
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.assessment),
             title: Text('World'),
-            backgroundColor: Colors.blue[800],
+            backgroundColor: Colors.grey[900],
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.local_hospital),
             title: Text('info'),
-            backgroundColor: Colors.blue[800],
+            backgroundColor: Colors.grey[900],
           ),
         ],
         
