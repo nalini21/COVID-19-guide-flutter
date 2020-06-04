@@ -6,12 +6,12 @@ import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 
 void main() => runApp(
       MaterialApp(
+        
         debugShowCheckedModeBanner: false,
         initialRoute: '/',
         routes: {
           '/': (context) => Loading(),
           '/home': (context) => Home(),
-
         },
       ),
     );

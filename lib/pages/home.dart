@@ -25,7 +25,7 @@ class _HomeState extends State<Home> {
     data = ModalRoute.of(context).settings.arguments;
     //countriesData = data['countiesData'];
     //print(countriesData);
-    //print(data);
+    //print(data['statesData']);
     List<Widget> _widgetOptions = <Widget>[
       HomePage(),
       IndiaStaticticsPage(data),

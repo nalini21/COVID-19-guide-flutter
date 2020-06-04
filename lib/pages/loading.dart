@@ -26,7 +26,7 @@ class _LoadingState extends State<Loading> {
         'indiaDeaths': indiaData.deaths,
         'indiaActive': indiaData.active,
         'countriesData': worldData.countriesData,
-        
+        'statesData': indiaData.statesData,
     });
   }
   @override
