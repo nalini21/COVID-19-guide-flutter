@@ -4,6 +4,7 @@ import 'package:t1/widgets/home_page.dart';
 import 'package:t1/widgets/info_page.dart';
 import 'package:t1/widgets/india_statistic_page.dart';
 import 'package:t1/widgets/world_statictics_page.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 
 
 class Home extends StatefulWidget {
@@ -41,31 +42,31 @@ class _HomeState extends State<Home> {
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(SimpleLineIcons.home),
             title: Text('Home'),
            backgroundColor: Colors.grey[900],
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.equalizer),
+            icon: Icon(SimpleLineIcons.location_pin),         
             title: Text('India'),
             backgroundColor: Colors.grey[900],
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.assessment),
+            icon: Icon(AntDesign.earth),
             title: Text('World'),
             backgroundColor: Colors.grey[900],
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.local_hospital),
+            icon: Icon(SimpleLineIcons.info),
             title: Text('info'),
             backgroundColor: Colors.grey[900],
           ),
         ],
         
         currentIndex: _currentindex,
-        unselectedItemColor: Colors.amber[400],
+        unselectedItemColor: Colors.grey[500],
         
-        selectedItemColor: Colors.white,
+        selectedItemColor: Colors.blue,
         onTap: _onItemTapped,
       ),
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 
 class IndiaStaticticsPage extends StatefulWidget {
   final Map data;
@@ -27,28 +28,26 @@ class _IndiaStaticticsPageState extends State<IndiaStaticticsPage> {
                     image: AssetImage('assets/images/india2.jpg'),
                     fit: BoxFit.cover,
                   )),
-              
               Container(
                   color: Colors.grey[900],
-                  padding: EdgeInsets.fromLTRB(140.w, 20.h, 40.w, 20.h),
+                  padding: EdgeInsets.fromLTRB(140.w, 30.h, 40.w, 30.h),
                   child: Row(
                     children: <Widget>[
                       Text(
                         'CONFIRMED CASES IN INDIA',
                         style: TextStyle(
-                            color: Colors.white,
+                            color: Colors.blue,
                             fontFamily: 'Quicksand',
                             fontWeight: FontWeight.bold,
                             fontSize: 24.0),
                       ),
                     ],
                   )),
-
               GridView.count(
                 padding: EdgeInsets.fromLTRB(40.w, 670.h, 40.w, 0),
                 crossAxisCount: 2,
                 primary: false,
-                 crossAxisSpacing: 30.0.w,
+                crossAxisSpacing: 30.0.w,
                 mainAxisSpacing: 30.0.h,
                 shrinkWrap: true,
                 children: <Widget>[
@@ -60,41 +59,51 @@ class _IndiaStaticticsPageState extends State<IndiaStaticticsPage> {
               ),
               Container(
                 //padding: EdgeInsets.fromLTRB(60, 20, 10, 20),
-                padding: EdgeInsets.fromLTRB(60.w, 2020.h, 60.w, 30.h),
-                child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Text(
-                        'Total',
-                        style: TextStyle(
-                            color: Colors.amber[500],
-                            fontFamily: 'Montserrat',
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20.0),
-                      ),
-                      Text(
-                        'Recovered',
-                        style: TextStyle(
-                            color: Colors.green[500],
-                            fontFamily: 'Montserrat',
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20.0),
-                      ),
-                      Text(
-                        'Deaths',
-                        style: TextStyle(
-                            color: Colors.red[500],
-                            fontFamily: 'Montserrat',
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20.0),
-                      ),
-                    ]),
+                padding: EdgeInsets.fromLTRB(60.w, 1720.h, 60.w, 30.h),
+                child: Column(children: <Widget>[
+                  Icon(MaterialCommunityIcons.chevron_triple_up,
+                  color: Colors.white.withOpacity(0.5),
+                  size: 90.h,),
+                  SizedBox(height: 20.h),
+                   Icon(MaterialCommunityIcons.chevron_triple_up,
+                  color: Colors.white.withOpacity(0.5),
+                  size: 90.h,),
+                  SizedBox(height: 50.h),
+                  Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text(
+                          'Total',
+                          style: TextStyle(
+                              color: Colors.amber[600],
+                              fontFamily: 'Montserrat',
+                              fontWeight: FontWeight.bold,
+                              fontSize: 25.0),
+                        ),
+                        Text(
+                          'Recovered',
+                          style: TextStyle(
+                              color: Colors.green[600],
+                              fontFamily: 'Montserrat',
+                              fontWeight: FontWeight.bold,
+                              fontSize: 25.0),
+                        ),
+                        Text(
+                          'Deaths',
+                          style: TextStyle(
+                              color: Colors.red[600],
+                              fontFamily: 'Montserrat',
+                              fontWeight: FontWeight.bold,
+                              fontSize: 25.0),
+                        ),
+                      ]),
+                ]),
               ),
             ],
           ),
           //SizedBox(height: 8),
           Container(
-             height: 1480.h,
+            height: 1580.h,
             margin: EdgeInsets.fromLTRB(20.w, 10.h, 20.w, 0),
             child: ListView.builder(
 
@@ -107,7 +116,7 @@ class _IndiaStaticticsPageState extends State<IndiaStaticticsPage> {
                     shadowColor: Colors.grey[100],
                     color: Colors.grey[100],
                     //color: Colors.grey[100],
-                     margin: EdgeInsets.fromLTRB(20.w, 10.h, 20.w, 30.h),
+                    margin: EdgeInsets.fromLTRB(20.w, 10.h, 20.w, 30.h),
                     child: ListTile(
                       title: Text(
                         '${widget.data['statesData'][index]['loc']}',
@@ -174,7 +183,7 @@ class _IndiaStaticticsPageState extends State<IndiaStaticticsPage> {
             Stack(children: <Widget>[
               Container(
                 // margin: EdgeInsets.only(left: 40.0),
-               height: 30.0.h,
+                height: 30.0.h,
                 width: 30.0.w,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30.0.w),
@@ -214,7 +223,7 @@ class _IndiaStaticticsPageState extends State<IndiaStaticticsPage> {
           ],
         ),
         margin: cardIndex.isEven
-           ? EdgeInsets.fromLTRB(7.0.w, 0.0, 21.0.w, 10.0.h)
+            ? EdgeInsets.fromLTRB(7.0.w, 0.0, 21.0.w, 10.0.h)
             : EdgeInsets.fromLTRB(24.0.w, 0.0, 4.0.w, 10.0.h));
   }
 }

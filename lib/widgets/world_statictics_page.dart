@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 
 class WorldStaticticsPage extends StatefulWidget {
   final Map data;
@@ -16,7 +17,7 @@ class _WorldStaticticsPageState extends State<WorldStaticticsPage> {
   Widget build(BuildContext context) {
     ScreenUtil.init(context, width: 1080, height: 2340, allowFontScaling: true);
     return new Scaffold(
-       backgroundColor: Colors.grey[800],
+      backgroundColor: Colors.grey[800],
       body: ListView(
         shrinkWrap: true,
         children: <Widget>[
@@ -31,18 +32,18 @@ class _WorldStaticticsPageState extends State<WorldStaticticsPage> {
                   )),
               //SizedBox(height: 20.0),
               Container(
-                color: Colors.grey[900],
-                  padding: EdgeInsets.fromLTRB(80.w, 20.h, 48.w, 20.h),
+                  color: Colors.grey[900],
+                  padding: EdgeInsets.fromLTRB(80.w, 30.h, 48.w, 30.h),
                   child: Text(
                     'CONFIRMED CASES WORLDWIDE',
                     style: TextStyle(
-                        color: Colors.white,
+                        color: Colors.blue,
                         fontFamily: 'Quicksand',
                         fontWeight: FontWeight.bold,
                         fontSize: 24.0),
                   )),
 
-             // SizedBox(height: 20.0),
+              // SizedBox(height: 20.0),
               GridView.count(
                 padding: EdgeInsets.fromLTRB(40.w, 670.h, 40.w, 0),
                 crossAxisCount: 2,
@@ -57,48 +58,56 @@ class _WorldStaticticsPageState extends State<WorldStaticticsPage> {
                   _buildCard('Deaths', widget.data['worldDeaths'], 4),
                 ],
               ),
-               Container(
-                  
-                    //padding: EdgeInsets.fromLTRB(60, 20, 10, 20),
-                    padding: EdgeInsets.fromLTRB(60.w, 2020.h, 60.w, 30.h),
-                    child: Row(
+              Container(
+                //padding: EdgeInsets.fromLTRB(60, 20, 10, 20),
+                padding: EdgeInsets.fromLTRB(60.w, 1720.h, 60.w, 30.h),
+                child: Column(children: <Widget>[
+                  Icon(MaterialCommunityIcons.chevron_triple_up,
+                  color: Colors.white.withOpacity(0.5),
+                  size: 90.h,),
+                  SizedBox(height: 20.h),
+                   Icon(MaterialCommunityIcons.chevron_triple_up,
+                  color: Colors.white.withOpacity(0.5),
+                  size: 90.h,),
+                  SizedBox(height: 60.h),
+                  Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                         Text(
-                        'Today',
-                        style: TextStyle(
-                            color: Colors.blue[600],
-                            fontFamily: 'Montserrat',
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20.0),
-                      ),
                         Text(
-                        'Total',
-                        style: TextStyle(
-                            color: Colors.amber[600],
-                            fontFamily: 'Montserrat',
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20.0),
-                      ),
-                      
-                          Text(
-                        'Recovered',
-                        style: TextStyle(
-                            color: Colors.green[600],
-                            fontFamily: 'Montserrat',
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20.0),
-                      ),
-                           Text(
-                        'Deaths',
-                        style: TextStyle(
-                            color: Colors.red[600],
-                            fontFamily: 'Montserrat',
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20.0),
-                      ),
-                        ]),
-                  ),
+                          'Today',
+                          style: TextStyle(
+                              color: Colors.blue[600],
+                              fontFamily: 'Montserrat',
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20.0),
+                        ),
+                        Text(
+                          'Total',
+                          style: TextStyle(
+                              color: Colors.amber[600],
+                              fontFamily: 'Montserrat',
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20.0),
+                        ),
+                        Text(
+                          'Recovered',
+                          style: TextStyle(
+                              color: Colors.green[600],
+                              fontFamily: 'Montserrat',
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20.0),
+                        ),
+                        Text(
+                          'Deaths',
+                          style: TextStyle(
+                              color: Colors.red[600],
+                              fontFamily: 'Montserrat',
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20.0),
+                        ),
+                      ]),
+                ]),
+              ),
             ],
           ),
           //SizedBox(height: 8),
@@ -113,9 +122,9 @@ class _WorldStaticticsPageState extends State<WorldStaticticsPage> {
                 itemBuilder: (context, index) {
                   return Card(
                     color: Colors.grey[100],
-                      elevation: 6.h,
+                    elevation: 6.h,
                     shadowColor: Colors.grey[100],
-                    
+
                     //color: Colors.grey[100],
                     margin: EdgeInsets.fromLTRB(20.w, 10.h, 20.w, 30.h),
                     child: ListTile(
@@ -144,7 +153,6 @@ class _WorldStaticticsPageState extends State<WorldStaticticsPage> {
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Quicksand',
                           letterSpacing: 2.w,
-                           
                         ),
                       ),
 
@@ -159,7 +167,7 @@ class _WorldStaticticsPageState extends State<WorldStaticticsPage> {
                                 color: Colors.amber[700],
                                 fontWeight: FontWeight.bold,
                                 fontFamily: 'Quicksand',
-                                 fontSize: 18,
+                                fontSize: 18,
                                 //letterSpacing: 1,
                               ),
                             ),
@@ -170,7 +178,7 @@ class _WorldStaticticsPageState extends State<WorldStaticticsPage> {
                                 color: Colors.green[700],
                                 fontWeight: FontWeight.bold,
                                 fontFamily: 'Quicksand',
-                                 fontSize: 18,
+                                fontSize: 18,
                                 //letterSpacing: 1,
                               ),
                             ),
@@ -181,7 +189,7 @@ class _WorldStaticticsPageState extends State<WorldStaticticsPage> {
                                 color: Colors.red[700],
                                 fontWeight: FontWeight.bold,
                                 fontFamily: 'Quicksand',
-                                 fontSize: 18,
+                                fontSize: 18,
                                 //letterSpacing: 1,
                               ),
                             ),
@@ -199,7 +207,7 @@ class _WorldStaticticsPageState extends State<WorldStaticticsPage> {
   Widget _buildCard(String name, String status, int cardIndex) {
     return Card(
         shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0.w)),
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0.w)),
         elevation: 20.0.h,
         child: Column(
           children: <Widget>[
@@ -236,7 +244,7 @@ class _WorldStaticticsPageState extends State<WorldStaticticsPage> {
                       child: Text(
                         '$status',
                         style: TextStyle(
-                            fontSize: 30,
+                            fontSize: 25,
                             color: Colors.white,
                             fontFamily: 'Quicksand'),
                       ),
