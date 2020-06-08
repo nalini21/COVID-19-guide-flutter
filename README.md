@@ -6,13 +6,7 @@
       </h5>                          
 
 ##### here is few screenshots from this app
-<img src="assets/images/world_page_ss1.png" width=200>
-.
-<img src="assets/images/world_page_ss2.png" width=200>
-.
-<img src="assets/images/world_page_ss3.png" width=200>
-.
-<img src="assets/images/india_page_ss1.png" width=200>
+
 
 ## Getting Started
 
