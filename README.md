@@ -10,7 +10,7 @@
 ![india page](assets/images/india1Gif.gif)
 ![about page](assets/images/about1Gif.gif)
 ![loading page](assets/images/loading1Gif.gif)
-<img src="assets/images/splash%20screen.jpg" width=400></img>
+<img src="assets/images/splash%20screen.jpg" width=400 height=800></img>
 
 ## Getting Started
 This project is a starting point for a Flutter application.
