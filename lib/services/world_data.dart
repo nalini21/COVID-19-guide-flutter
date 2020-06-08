@@ -9,7 +9,7 @@ class WorldData {
   String deaths;
   List countriesData;
   Future<void> getWorldData() async {
-    // try {
+    try {
       // Response res = await get('https://covid19.mathdro.id/api');
       // Map worldData = jsonDecode(res.body);
       Response res1 = await get('https://coronavirus-19-api.herokuapp.com/countries');
@@ -22,9 +22,9 @@ class WorldData {
       deaths =countriesData[0]['deaths'].toString();
       active = countriesData[0]['active'].toString();
 
-    // } catch (e) {
-    //   print('error in getting world data');
-    //   print(e);
-    // }
+     } catch (e) {
+      print('error in getting world data');
+      print(e);
+    }
   }
 }
