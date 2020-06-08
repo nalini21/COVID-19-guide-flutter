@@ -36,7 +36,7 @@ dependencies:
   #flutter_bloc: ^3.0.0
   # meta: ^1.1.6
   # equatable: ^1.0.0
- 
+  url_launcher: ^5.4.10
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -59,14 +59,14 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-     - assets/images/download.jpg
-     - assets/images/corona1.jpg
-     - assets/images/corona2.jpg
      - assets/images/world2.jpg
      - assets/images/india2.jpg
-     - assets/images/india3.jpg
-     - assets/images/india_map.jpg
-     - assets/images/india_map2.png
+     - assets/images/be_ready1.jpg
+     - assets/images/be_ready2.jpg
+     - assets/images/be_ready3.jpg
+     - assets/images/be_ready5.jpg
+     - assets/images/be_ready6.jpg
+     - assets/images/git2.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 //
 import 'package:t1/widgets/home_page.dart';
-import 'package:t1/widgets/info_page.dart';
 import 'package:t1/widgets/india_statistic_page.dart';
 import 'package:t1/widgets/world_statictics_page.dart';
 import 'package:flutter_icons/flutter_icons.dart';
@@ -32,7 +31,6 @@ class _HomeState extends State<Home> {
       HomePage(),
       IndiaStaticticsPage(data),
       WorldStaticticsPage(data),
-      InfoPage(),
     ];
     return Scaffold(
       body: Center(
@@ -56,16 +54,11 @@ class _HomeState extends State<Home> {
             title: Text('World'),
             backgroundColor: Colors.grey[900],
           ),
-          BottomNavigationBarItem(
-            icon: Icon(SimpleLineIcons.info),
-            title: Text('info'),
-            backgroundColor: Colors.grey[900],
-          ),
         ],
         
         currentIndex: _currentindex,
         unselectedItemColor: Colors.grey[500],
-        
+         backgroundColor: Colors.grey[900],
         selectedItemColor: Colors.blue,
         onTap: _onItemTapped,
       ),
