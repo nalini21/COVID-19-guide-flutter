@@ -1,18 +1,16 @@
 # COVID-19 TRACKER
 
-#### Flutter App which provides covid-19 confirmed cases data of all the countries, Also gives basic information about COVID-19, Like it's symptoms and precautions to be taken 
+#### Flutter App which provides covid-19 confirmed cases data of all the countries, Also gives basic information about COVID-19.
 
 <h5> API used in this project: <br></br>"https://coronavirus-19-api.herokuapp.com/countries" <br></br>"https://api.rootnet.in/covid19-in/stats/latest"
       </h5>                          
 
-##### here is few screenshots from this app
-<img src="assets/images/world_page_ss1.png" width=200>
-.
-<img src="assets/images/world_page_ss2.png" width=200>
-.
-<img src="assets/images/world_page_ss3.png" width=200>
-.
-<img src="assets/images/india_page_ss1.png" width=200>
+![home page](assets/images/home1Gif.gif)
+![home page](assets/images/world1Gif.gif)
+![home page](assets/images/india1Gif.gif)
+![home page](assets/images/about1Gif.gif)
+![home page](assets/images/loading1Gif.gif)
+<img src="assets/images/splash%20screen.jpg" width=400></img>
 
 ## Getting Started
 
