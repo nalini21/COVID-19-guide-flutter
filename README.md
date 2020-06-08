@@ -5,8 +5,12 @@
 <h5> API used in this project: <br></br>"https://coronavirus-19-api.herokuapp.com/countries" <br></br>"https://api.rootnet.in/covid19-in/stats/latest"
       </h5>                          
 
-##### here is few screenshots from this app
-
+![home page](assets/images/home1Gif.gif)
+![home page](assets/images/world1Gif.gif)
+![home page](assets/images/india1Gif.gif)
+![home page](assets/images/about1Gif.gif)
+![home page](assets/images/loading1Gif.gif)
+<img src="assets/images/splash%20screen.jpg" width=400></img>
 
 ## Getting Started
 
