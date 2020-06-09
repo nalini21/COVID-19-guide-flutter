@@ -4,8 +4,8 @@
 
 <h5> API used in this project: <br></br>"https://coronavirus-19-api.herokuapp.com/countries" <br></br>"https://api.rootnet.in/covid19-in/stats/latest"
       </h5>                          
-# Download here
-![](assets/images/app_apk.png)
+## Download here
+<img src="assets/images/app_apk.png" width=300 height=300 class="center"></img>
 
 ![home page](assets/images/home1Gif.gif)
 ![world page](assets/images/world1Gif.gif)
